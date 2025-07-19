@@ -1,5 +1,5 @@
 async function loadData() {
-  const res = await fetch("http://127.0.0.1:5000/api/data");
+  const res = await fetch("https://your-backend.onrender.com/api/data");
   const data = await res.json();
 
   const dates = [];
