@@ -13,16 +13,20 @@ async function loadData() {
   });
 
   new Chart(document.getElementById("covidChart"), {
-    type: 'line',
-    data: {
-      labels: dates,
-      datasets: [{
-        label: 'New Cases in India',
-        data: indiaCases,
-        borderColor: 'blue',
-        fill: false
-      }]
-    }
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [{
+      label: 'New Cases in India',
+      data: indiaCases,
+      borderColor: 'blue',
+      fill: false
+    }]
+  },
+  options: {
+    responsive: false,
+    maintainAspectRatio: false
+  }
   });
 }
 
